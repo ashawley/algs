@@ -1,1 +1,1 @@
-addSbtPlugin("org.scalariform" % "sbt-scalariform" % "1.6.0")
+addSbtPlugin("com.felixmulder" % "sbt-dotty" % "0.1.4")
