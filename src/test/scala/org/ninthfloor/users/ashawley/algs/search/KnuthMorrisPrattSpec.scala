@@ -29,9 +29,10 @@ import org.scalacheck.Properties
 
 object KnuthMorrisPrattSpec extends Properties("KnuthMorrisPratt") {
 
-  implicit val arbKmp = Arbitrary(Gen.resultOf { (s: String, w: String) =>
-    new KnuthMorrisPratt(s, w)
-  })
+  implicit val arbKmp: Arbitrary[KnuthMorrisPratt] =
+    Arbitrary(Gen.resultOf { (s: String, w: String) =>
+      new KnuthMorrisPratt(s, w)
+    })
 
   property("table.length") = {
     import Prop.AnyOperators
